@@ -1,19 +1,60 @@
+/* Body style */
 body {
-    font-family: sans-serif;
+    font-family: "Times New Roman", serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5; /* light grey background */
+    color: #333; /* dark text for readability */
 }
 
+/* Section styling */
 .section {
-    padding: 50px;
+    padding: 60px 20px; /* more padding and side padding */
     text-align: center;
+    margin: 20px auto; /* add vertical spacing between sections */
+    max-width: 1000px; /* limit width on large screens */
+    background-color: #ffffff; /* white background for each section */
+    border-radius: 10px; /* rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
 }
 
+/* Headings */
+h1, h2, h3 {
+    color: #2c3e50; /* dark blue-ish color */
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    color: #555; /* medium dark grey */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Project container */
 .project {
-    margin: 20px 0;
+    margin: 30px 0; /* space between projects */
 }
 
+/* Project image */
 .project img {
     width: 300px;
     border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for images */
+.project img:hover {
+    transform: scale(1.05); /* slight zoom on hover */
+}
+
+/* Links (if you add any) */
+a {
+    color: #2980b9; /* blue link */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
