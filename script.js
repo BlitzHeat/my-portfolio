@@ -1,25 +1,24 @@
-// script.js
+// theme toggle
+const themeToggle = document.getElementById("themeToggle");
+const currentTheme = localStorage.getItem("theme");
 
-// Dark mode toggle
-const toggleButton = document.getElementById('dark-mode-toggle');
-toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+// apply saved theme
+if (currentTheme === "light") {
+    document.body.classList.add("light");
+    themeToggle.textContent = "🌙";
+} else {
+    themeToggle.textContent = "☀️";
+}
 
-// Smooth animations for sections
-const sections = document.querySelectorAll('.section');
-const options = {
-  threshold: 0.1
-};
+// toggle theme
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+    if (document.body.classList.contains("light")) {
+        themeToggle.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+    } else {
+        themeToggle.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
     }
-  });
-}, options);
-
-sections.forEach(section => {
-  observer.observe(section);
 });
