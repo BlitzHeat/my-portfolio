@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<!-- HOME -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </nav>
+</header>
+
 <section id="home" class="section">
-    <h1>Hello, I'm Your Name</h1>
-    <p>Welcome to my portfolio website!</p>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I'm [Your Name], a web designer passionate about creating beautiful and functional websites.</p>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
     <h2>About Me</h2>
-    <p>Write a short background about yourself here...</p>
-    <h3>Skills</h3>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
+    <p>I have a background in [your background, e.g., computer science and design]. My skills include HTML, CSS, JavaScript, and tools like Figma, Adobe XD, and VS Code.</p>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="section">
     <h2>Projects</h2>
-
     <div class="project">
-        <img src="images/project1.png" alt="Project 1" />
-        <h3>Project 1 Title</h3>
-        <p>Short description about project 1.</p>
+        <h3>Project 1: E-commerce Site</h3>
+        <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1 Thumbnail">
+        <p>A responsive e-commerce website built with HTML, CSS, and JS, featuring product listings and a shopping cart.</p>
     </div>
-
     <div class="project">
-        <img src="images/project2.png" alt="Project 2" />
-        <h3>Project 2 Title</h3>
-        <p>Short description about project 2.</p>
+        <h3>Project 2: Blog Platform</h3>
+        <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2 Thumbnail">
+        <p>A dynamic blog platform with user authentication and content management, using React and Firebase.</p>
     </div>
-
     <div class="project">
-        <img src="images/project3.png" alt="Project 3" />
-        <h3>Project 3 Title</h3>
-        <p>Short description about project 3.</p>
+        <h3>Project 3: Portfolio Template</h3>
+        <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3 Thumbnail">
+        <p>A customizable portfolio template designed for freelancers, with dark mode and animations.</p>
     </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section">
     <h2>Contact Me</h2>
-    <p>Email: youremail@example.com</p>
+    <p>Email: [your.email@example.com]</p>
+    <p>Or reach out via LinkedIn: [your LinkedIn profile]</p>
 </section>
+
+<script src="script.js"></script>
 </body>
 </html>

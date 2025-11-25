@@ -1,60 +1,129 @@
-/* Body style */
-body {
-    font-family: "Times New Roman", serif;
+/* styles.css */
+
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* light grey background */
-    color: #333; /* dark text for readability */
+    box-sizing: border-box;
 }
 
-/* Section styling */
-.section {
-    padding: 60px 20px; /* more padding and side padding */
-    text-align: center;
-    margin: 20px auto; /* add vertical spacing between sections */
-    max-width: 1000px; /* limit width on large screens */
-    background-color: #ffffff; /* white background for each section */
-    border-radius: 10px; /* rounded corners for a softer look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
-}
-
-/* Headings */
-h1, h2, h3 {
-    color: #2c3e50; /* dark blue-ish color */
-    margin-bottom: 20px;
-}
-
-/* Paragraphs */
-p {
-    color: #555; /* medium dark grey */
+body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin-bottom: 20px;
+    color: #333;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Project container */
-.project {
-    margin: 30px 0; /* space between projects */
+/* Dark mode variables */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-/* Project image */
-.project img {
-    width: 300px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    transition: transform 0.3s;
+/* Header and Nav */
+header {
+    background-color: #fff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
 }
 
-/* Hover effect for images */
-.project img:hover {
-    transform: scale(1.05); /* slight zoom on hover */
+body.dark-mode header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-/* Links (if you add any) */
-a {
-    color: #2980b9; /* blue link */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
     text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
 }
 
-a:hover {
-    text-decoration: underline;
+body.dark-mode nav a {
+    color: #e0e0e0;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-left: auto;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #dark-mode-toggle {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+}
+
+/* Projects */
+#projects .project {
+    margin: 2rem auto;
+    max-width: 600px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode #projects .project {
+    background: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
 }
